@@ -118,7 +118,10 @@ data.columns = [
 
 print(data.head())
 
-data.iloc[:, 1:].type = ((data.iloc[:, 1:]) // 1000).astype(int)  # Упрощаем данные для дальнейшей работы
+# Упрощаем данные для дальнейшей работы приводя просто Лиры в миллионы Лир
+data.iloc[:, 1:] = (data.iloc[:, 1:]) // 1000000
+
+print(data.dtypes)
 
 print(data.describe())
 
@@ -126,3 +129,5 @@ data['DATE'] = pd.to_datetime(data['DATE'])
 
 print(data['GENERAL TOTAL'].astype(int))
 print(data['GENERAL TOTAL'].mean().astype(int))
+print(data['GENERAL TOTAL'].std().astype(int))
+
