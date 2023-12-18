@@ -10,5 +10,6 @@
     <orderEntry type="module" module-name="Lr4PSA" />
     <orderEntry type="module" module-name="Lr1StatAnalys" />
     <orderEntry type="module" module-name="Lr2StatAn" />
+    <orderEntry type="module" module-name="Lr6PSA" />
   </component>
 </module>
